@@ -7,25 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
-
-<!-- 添加到现有网站的 HTML 文件中 -->
-<div id="music-player" class="floating-player">
-  <div class="header" id="player-header">
-    悬浮窗播放器
-    <button id="close-btn">×</button>
-  </div>
-  <audio id="audio" src="music/song.mp3"></audio>
-  <div class="controls">
-    <button id="play-pause">播放</button>
-    <button id="stop">停止</button>
-    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
-  </div>
-  <p id="track-info">当前歌曲: song.mp3</p>
-</div>
-
-
-
 <body>
     <header>
         <h1>欢迎来到我的个人主页</h1>
@@ -60,6 +41,22 @@
         </ul>
     </section>
     <footer>
+
+<!-- 添加到现有网站的 HTML 文件中 -->
+<div id="music-player" class="floating-player">
+  <div class="header" id="player-header">
+    悬浮窗播放器
+    <button id="close-btn">×</button>
+  </div>
+  <audio id="audio" src="music/song.mp3"></audio>
+  <div class="controls">
+    <button id="play-pause">播放</button>
+    <button id="stop">停止</button>
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+  </div>
+  <p id="track-info">当前歌曲: song.mp3</p>
+</div>
+
         <p>&copy; 2025 不二. 保留所有权利。</p>
     </footer>
 </body>
