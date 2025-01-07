@@ -5,9 +5,9 @@ const nextButton = document.getElementById("next");
 const currentSongDisplay = document.getElementById("current-song");
 
 const songs = [
-    { name: "第一首歌", file: "/song.mp3" },
-    { name: "第二首歌", file: "/song1.mp3" },
-    { name: "第三首歌", file: "/song2.mp3" },
+    { name: "第一首歌", file: "song.mp3" },
+    { name: "第二首歌", file: "song.mp3" },
+    { name: "第三首歌", file: "song.mp3" },
 ];
 
 let currentIndex = 0;
