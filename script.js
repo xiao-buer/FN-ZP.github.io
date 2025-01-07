@@ -1,60 +1,50 @@
-const audio = document.getElementById('audio');
-const playPauseButton = document.getElementById('play-pause');
-const stopButton = document.getElementById('stop');
-const volumeControl = document.getElementById('volume');
-const trackInfo = document.getElementById('track-info');
-const musicPlayer = document.getElementById('music-player');
-const header = document.getElementById('player-header');
-const closeButton = document.getElementById('close-btn');
+const audio = document.getElementById("audio");
+const playPauseButton = document.getElementById("play-pause");
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+const currentSongDisplay = document.getElementById("current-song");
 
-let isPlaying = false;
+const songs = [
+    { name: "第一首歌", file: "/狗尾巴草.mp3" },
+    { name: "第二首歌", file: "/song2.mp3" },
+    { name: "第三首歌", file: "/song3.mp3" },
+];
 
-// 播放或暂停音乐
-playPauseButton.addEventListener('click', () => {
-  if (isPlaying) {
-    audio.pause();
-    playPauseButton.textContent = '播放';
-  } else {
+let currentIndex = 0;
+
+function loadSong(index) {
+    audio.src = songs[index].file;
+    currentSongDisplay.textContent = `当前播放：${songs[index].name}`;
+}
+
+function playPause() {
+    if (audio.paused) {
+        audio.play();
+        playPauseButton.textContent = "⏸️";
+    } else {
+        audio.pause();
+        playPauseButton.textContent = "▶️";
+    }
+}
+
+function nextSong() {
+    currentIndex = (currentIndex + 1) % songs.length;
+    loadSong(currentIndex);
     audio.play();
-    playPauseButton.textContent = '暂停';
-  }
-  isPlaying = !isPlaying;
-});
+    playPauseButton.textContent = "⏸️";
+}
 
-// 停止音乐
-stopButton.addEventListener('click', () => {
-  audio.pause();
-  audio.currentTime = 0;
-  playPauseButton.textContent = '播放';
-  isPlaying = false;
-});
+function prevSong() {
+    currentIndex = (currentIndex - 1 + songs.length) % songs.length;
+    loadSong(currentIndex);
+    audio.play();
+    playPauseButton.textContent = "⏸️";
+}
 
-// 调节音量
-volumeControl.addEventListener('input', (event) => {
-  audio.volume = event.target.value;
-});
+playPauseButton.addEventListener("click", playPause);
+prevButton.addEventListener("click", prevSong);
+nextButton.addEventListener("click", nextSong);
 
-// 关闭悬浮窗
-closeButton.addEventListener('click', () => {
-  musicPlayer.style.display = 'none';
-});
-
-// 实现悬浮窗拖动
-let offsetX, offsetY, isDragging = false;
-
-header.addEventListener('mousedown', (event) => {
-  isDragging = true;
-  offsetX = event.clientX - musicPlayer.offsetLeft;
-  offsetY = event.clientY - musicPlayer.offsetTop;
-});
-
-document.addEventListener('mousemove', (event) => {
-  if (isDragging) {
-    musicPlayer.style.left = `${event.clientX - offsetX}px`;
-    musicPlayer.style.top = `${event.clientY - offsetY}px`;
-  }
-});
-
-document.addEventListener('mouseup', () => {
-  isDragging = false;
-});
+window.onload = () => {
+    loadSong(currentIndex);
+};
