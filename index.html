@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,54 +8,35 @@
 </head>
 <body>
     <header>
-        <h1>欢迎来到我的个人主页</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#projects">作品展示</a></li>
-                <li><a href="#contact">联系我</a></li>
-            </ul>
-        </nav>
+        <h1>我的个人主页</h1>
+        <p>音乐让生活更美好</p>
+        <p>科技让时代在进步</p>
     </header>
 
-<div class="music-player">
-    <h1>音乐</h1>
-    <audio id="audio" src="/song.mp3"></audio>
-    <div class="controls">
-      <button id="play-pause">播放</button>
-      <button id="stop">停止</button>
-      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
-    </div>
-    <p id="track-info">当前歌曲:高石宇-狗尾巴草</p>
-  </div>
-  <script src="script.js"></script>
+    <main>
+        <section>
+            <h2>关于我</h2>
+            <p>你好！我是 <strong>[不二]</strong>，喜欢编程和音乐。</p>
+        </section>
 
+        <section>
+            <h2>音乐播放器</h2>
+            <div class="player">
+                <audio id="audio"></audio>
+                <div class="controls">
+                    <button id="prev">⏮️</button>
+                    <button id="play-pause">▶️</button>
+                    <button id="next">⏭️</button>
+                </div>
+                <p id="current-song">当前播放：暂无</p>
+            </div>
+        </section>
+    </main>
 
-
-    <section id="about">
-        <h2>关于我</h2>
-        <p>你好！我是[不二]，一名[开发者]。我对编程充满热情，并喜欢分享我的经验和知识。</p>
-    </section>
-    <section id="projects">
-        <h2>作品展示</h2>
-        <p>以下是我的一些项目展示：</p>
-        <ul>
-            <li>项目 1: <a href="#">项目链接 1</a></li>
-            <li>项目 2: <a href="#">项目链接 2</a></li>
-            <li>项目 3: <a href="#">项目链接 3</a></li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>联系我</h2>
-        <p>你可以通过以下方式联系我：</p>
-        <ul>
-            <li>邮箱: <a href="ay3327513573@mail.com">ay3327513573@gmail.com</a></li>
-            <li>Telegram: <a href="https://t.me/BOER_ZC" target="_blank">我的 Telegram</a></li>
-            <li>QQ: <a href="https://qm.qq.com/q/9AGPWztEcw" target="_blank">我的 QQ</a></li>
-        </ul>
-    </section>
     <footer>
-        <p>&copy; 2025 不二. 保留所有权利。</p>
+        <p>&copy; 2025 [不二]</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
