@@ -57,7 +57,70 @@ h2 {
     display: inline-block;
     padding-bottom: 5px;
 }
+/* 悬浮窗播放器样式 */
+.floating-player {
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  z-index: 1000;
+}
 
+.header {
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type="range"] {
+  width: 100px;
+}
+
+p {
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
 /* 底部样式 */
 footer {
     text-align: center;
