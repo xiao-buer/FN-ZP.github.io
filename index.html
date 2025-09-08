@@ -3,83 +3,85 @@
 
 <head>
     <meta charset="UTF - 8">
-    <meta name="viewport" content="width=device - width, initial - scale = 1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>游戏俱乐部网站</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- 顶部导航栏 -->
+    <!-- 网站头部 -->
     <header>
-        <div class="logo">
-            <img src="game_club_logo.png" alt="游戏俱乐部标志">
-        </div>
+        <h1>卓越游戏俱乐部</h1>
         <nav>
             <ul>
                 <li><a href="#">首页</a></li>
                 <li><a href="#">俱乐部介绍</a></li>
-                <li><a href="#">游戏项目</a></li>
-                <li><a href="#">赛事活动</a></li>
+                <li><a href="#">热门游戏</a></li>
+                <li><a href="#">活动赛事</a></li>
                 <li><a href="#">加入我们</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 首页主要展示区域 -->
+    <!-- 主内容区域 -->
     <main>
+        <!-- 首页英雄图区域 -->
         <section class="hero">
             <img src="game_background.jpg" alt="游戏背景图">
             <div class="hero - text">
-                <h1>欢迎来到游戏爱好者的乐园</h1>
-                <p>在这里，一起探索游戏的无限可能</p>
+                <h2>欢迎来到卓越游戏俱乐部</h2>
+                <p>开启你的游戏之旅，结识志同道合的伙伴</p>
             </div>
         </section>
 
         <!-- 俱乐部介绍区域 -->
-        <section class="about - club">
-            <h2>关于我们的俱乐部</h2>
-            <p>我们的游戏俱乐部成立于[成立年份]，一直以来致力于汇聚各类游戏爱好者，为大家打造一个交流、竞技与合作的优质平台。无论是热门的电子竞技游戏，还是经典的桌面游戏，我们都有专业的团队和热情的成员。</p>
+        <section class="about">
+            <h2>关于我们</h2>
+            <p>卓越游戏俱乐部成立于[具体年份]，是一个专注于各类游戏的玩家组织。我们汇聚了一群热爱游戏、追求卓越的玩家，旨在为大家提供一个交流、竞技和娱乐的平台。</p>
+            <p>无论你擅长MOBA、FPS还是RPG游戏，在这里都能找到归属感。</p>
         </section>
 
-        <!-- 游戏项目展示区域 -->
-        <section class="game - projects">
-            <h2>热门游戏项目</h2>
-            <div class="game - project">
-                <img src="game1.jpg" alt="游戏1图片">
+        <!-- 热门游戏展示区域 -->
+        <section class="popular - games">
+            <h2>热门游戏</h2>
+            <div class="game - card">
+                <img src="game1.jpg" alt="游戏1">
                 <h3>英雄联盟</h3>
-                <p>5V5团队竞技，策略与操作的完美结合。</p>
+                <p>5V5多人在线战斗竞技游戏，策略与操作的完美结合。</p>
             </div>
-            <div class="game - project">
-                <img src="game2.jpg" alt="游戏2图片">
+            <div class="game - card">
+                <img src="game2.jpg" alt="游戏2">
                 <h3>绝地求生</h3>
-                <p>百人同场竞技，生存与战斗的考验。</p>
+                <p>大逃杀类型游戏，生存与战斗的考验。</p>
             </div>
-            <div class="game - project">
-                <img src="game3.jpg" alt="游戏3图片">
-                <h3>王者荣耀</h3>
-                <p>随时随地，指尖上的MOBA对决。</p>
+            <div class="game - card">
+                <img src="game3.jpg" alt="游戏3">
+                <h3>魔兽世界</h3>
+                <p>经典大型多人在线角色扮演游戏，广阔的虚拟世界等待探索。</p>
             </div>
         </section>
 
-        <!-- 赛事活动区域 -->
-        <section class="events">
-            <h2>近期赛事活动</h2>
-            <div class="event">
-                <img src="event1.jpg" alt="赛事1图片">
-                <h3>俱乐部内部英雄联盟赛</h3>
-                <p>时间：[具体日期1]，地点：[比赛地点1]</p>
+        <!-- 活动赛事区域 -->
+        <section class="events - tournaments">
+            <h2>活动赛事</h2>
+            <div class="event - card">
+                <img src="tournament1.jpg" alt="赛事1">
+                <h3>月度英雄联盟争霸赛</h3>
+                <p>每月一次的激烈对决，争夺俱乐部最强战队称号。</p>
+                <a href="#" class="btn">了解详情</a>
             </div>
-            <div class="event">
-                <img src="event2.jpg" alt="赛事2图片">
-                <h3>王者荣耀友谊赛</h3>
-                <p>时间：[具体日期2]，地点：[比赛地点2]</p>
+            <div class="event - card">
+                <img src="event1.jpg" alt="活动1">
+                <h3>线下游戏聚会</h3>
+                <p>线下交流活动，一起畅玩游戏，增进玩家友谊。</p>
+                <a href="#" class="btn">了解详情</a>
             </div>
         </section>
     </main>
 
-    <!-- 页脚区域 -->
+    <!-- 网站底部 -->
     <footer>
-        <p>&copy; 2024 游戏俱乐部版权所有</p>
+        <p>&copy; 2024 卓越游戏俱乐部 版权所有</p>
         <ul>
             <li><a href="#">隐私政策</a></li>
             <li><a href="#">使用条款</a></li>
@@ -87,4 +89,4 @@
     </footer>
 </body>
 
-</html
+</html>
