@@ -1,20 +1,22 @@
 /* 通用样式 */
 body {
-    font-family: Arial, sans - serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line - height: 1.6;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #f0f0f5, #e0e0e5);
 }
 
 header {
-    background - color: #333;
+    background: linear-gradient(to right, #ff6b6b, #ffa500);
     color: white;
-    text - align: center;
+    text-align: center;
     padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
-    list - style - type: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -26,51 +28,59 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    text - decoration: none;
+    text-decoration: none;
+    transition: color 0.3s ease - in - out;
 }
 
 nav ul li a:hover {
-    text - decoration: underline;
+    color: #f0f0f0;
+    text-decoration: underline;
 }
 
 .section {
     padding: 40px;
     margin: 20px;
     border: 1px solid #ccc;
-    border - radius: 5px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    text - align: center;
-    margin - bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ff6b6b, #ffa500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .event {
-    margin - bottom: 30px;
-    border - bottom: 1px solid #ccc;
-    padding - bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
 }
 
 table {
     width: 100%;
-    border - collapse: collapse;
+    border-collapse: collapse;
 }
 
 table th,
 table td {
     border: 1px solid #ccc;
     padding: 10px;
-    text - align: center;
+    text-align: center;
 }
 
 table thead {
-    background - color: #333;
+    background: linear-gradient(to right, #ff6b6b, #ffa500);
     color: white;
 }
 
 footer {
-    background - color: #333;
+    background: linear-gradient(to right, #ff6b6b, #ffa500);
     color: white;
-    text - align: center;
+    text-align: center;
     padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
